@@ -22,7 +22,7 @@ sidebar.addEventListener('click', () => {
 
 // Sharing Function
 function shareTo(platform) {
-  const url = encodeURIComponent('https://alfabot.id');
+  const url = encodeURIComponent('https://fareldev5.github.io/alfabot.id/');
   const des = `Halo!! saya ingin menawarkan sebuah chatAi gratis yang dapat membantu anda dalam menyelesaikan masalah maupun mencari solusi! 😄
   Untuk memulai silahkan klik link ini ${url}`
   const shareLinks = {
