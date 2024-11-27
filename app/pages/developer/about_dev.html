@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About Page</title>
+  <style>
+    html {
+      padding: 0;
+      margin: 0;
+      font-family: arial;
+    }
+
+    body {
+      background-color: #EFEFEF;
+    }
+
+    .section {
+      background-color: #FFFFFF;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    #header {
+      background: linear-gradient(#212121, #151515);
+      background-size: cover;
+    }
+
+    #header img {
+      border-radius: 50%;
+      border: 1px solid #212121;
+      width: 5rem;
+    }
+
+    #header p {
+      font-size: 20pt;
+      color: #EFEFEF;
+      padding-top: 5px;
+      margin: 0;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    progress {
+      width: 80%;
+      height: 18px;
+      margin-left: 10%;
+      color: #000000;
+      background: #efefef;
+      border-radius: 10px;
+    }
+
+    progress::-webkit-progress-bar {
+      background: #efefef;
+      border-radius: 10px;
+    }
+
+    progress::-webkit-progress-value {
+      background: #000000;
+      border-radius: 10px;
+    }
+
+    #languages p {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    form {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 8px;
+      font-size: 11pt;
+      padding: 10px 10px 10px;
+      border: 1px solid #cecece;
+      background-color: #EFEFEF;
+      color: #404040;
+      border-radius: 10px;
+      width: 70%;
+      outline: none;
+    }
+
+    .button {
+      background-color: #000000;
+      border-radius: 10px;
+      color: #FFFFFF;
+      border: none;
+      outline: none;
+      margin: 1rem 0;
+      font-weight: bold;
+      max-width: 100px;
+    }
+
+    .button:active {
+      opacity: 50%;
+    }
+
+    textarea {
+      height: 80px;
+    }
+
+    h2 {
+      color: #282828;
+    }
+
+    #coloring {
+      color: #3546FF;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Header Start-->
+  <div id="header" class="section" align="center">
+    <img src="dev/owner.jpg"">
+    <p>Farel Alfareza</p>
+    <input value="Back" id="back--btn" type="button" class="button" onclick="history.back()">
+  </div>
+
+  <!--About Me-->
+  <div class="section">
+    <h2 align="center">About Me</h2>
+    <p id="about-txt">Saya adalah seorang pemgembang yang berasal dari indonesia tepatnya provinsi sulawesi selatan kabupaten bulukumba desa.bontoharu, saya sangat bersemangat dalam mengembangkan sebuah proyek dan terampil dalam beberapa bahasa pemrograman. tidak hanya itu saya juga cukup terampil di dalam beberapa bidang salah satunya,animator dan editor.</p>
+  </div>
+  <div class="section">
+    <h2 id="R-pdd">Riwayat Pendidikan:</h2>
+    <content style="text-align:left">
+      <li>🏫: SD NEGERI 2 LALOMBAA</li>
+      <li>🏫: SMP NEGERI 1 KOLAKA - MTS SAMPEANG</li>
+      <li>🏫: SMK NEGERI 5 BULUKUMBA <span id="coloring">(Berlangsung)</span></li>
+    </content>
+
+  </div>
+  <!--Coding Languages-->
+  <div id="languages" class="section">
+    <p>HTML</p>
+    <progress min="0" max="100" value="100"></progress>
+    <p>CSS</p>
+    <progress min="0" max="100" value="90"></progress>
+    <p>SQL</p>
+    <progress min="0" max="100" value="75"></progress>
+    <p>JAVASCRIPT</p>
+    <progress min="0" max="100" value="85"></progress>
+    <p>PYTHON</p>
+    <progress min="0" max="100" value="58"></progress>
+    <p>JAVA</p>
+    <progress min="0" max="100" value="50"></progress>
+    <p>PHP</p>
+    <progress min="0" max="100" value="85"></progress>
+  </div>
+
+  <div class="section">
+    <p id="copyright" style="display:flex; align-items: center; justify-content: center;" align="center"></p>
+  </div>
+</body>
+<script src="https://widget.cxgenie.ai/widget.js" data-aid="b7cc484b-fe50-42d0-bf7e-fc2c5e23a139" data-lang="en"></script>
+<script>
+  var cpRight = document.getElementById('copyright')
+  var date = new Date()
+  var yrs = date.getFullYear()
+
+  cpRight.innerHTML = `&copy; FR_PROJECT ${yrs}`
+
+  const translations = {
+    "en": {
+      R_txt: "Educational background",
+      description: "I am a developer who comes from Indonesia, specifically South Sulawesi province, Bulukumba village, Bontoharu district, I am very passionate about developing projects and am skilled in several programming languages. Not only that, I am also quite skilled in several fields, one of which is animator and editor.",
+      lang_button: "Back",
+      about_dev: 'About Me'
+    },
+    "id": {
+      R_txt: "Latar belakang pendidikan",
+      description: "Saya adalah seorang pemgembang yang berasal dari indonesia tepatnya provinsi sulawesi selatan kabupaten bulukumba desa.bontoharu, saya sangat bersemangat dalam mengembangkan sebuah proyek dan terampil dalam beberapa bahasa pemrograman. tidak hanya itu saya juga cukup terampil di dalam beberapa bidang salah satunya,animator dan editor.",
+      lang_button: "Kembali",
+      about_dev: 'Tentang Saya'
+    },
+    "default": {
+      R_txt: "Educational background",
+      description: "I am a developer who comes from Indonesia, specifically South Sulawesi province, Bulukumba village, Bontoharu district, I am very passionate about developing projects and am skilled in several programming languages. Not only that, I am also quite skilled in several fields, one of which is animator and editor.",
+      lang_button: "Back",
+      about_dev: 'About Me'
+    }
+  };
+
+  // Mendapatkan bahasa perangkat
+  const deviceLanguage = navigator.language || navigator.userLanguage;
+  const langCode = deviceLanguage.split("-")[0]; // Ambil kode bahasa utama (e.g., "en" dari "en-US")
+
+  // Pilih terjemahan berdasarkan bahasa perangkat
+  const selectedTranslations = translations[langCode] || translations["default"];
+
+  // Menampilkan hasil translasi ke elemen dengan id tertentu
+  document.getElementById("R-pdd").innerText = selectedTranslations.R_txt;
+  document.getElementById("back--btn").value = selectedTranslations.lang_button;
+  document.getElementById("about-txt").innerText = selectedTranslations.about_dev;
+  document.getElementById('about-txt').innerText = selectedTranslations.description
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/wv|webview/i.test(userAgent) || (navigator.platform === "Linux armv8l" && /android/i.test(userAgent))) {
+      document.body.style.userSelect = 'none'
+    } else {
+      document.body.style.userSelect = 'auto'
+    }
+  });
+</script>
+
+</html>
