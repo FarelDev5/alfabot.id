@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alfabot</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./app/pages/img/draw_ic_app.png">
+  <link rel="stylesheet" href="./res/des/design.css">
+</head>
+
+<body>
+  <div id="gptMenu" class="gpt-menu" style="display: none;">
+    <select id="gptVersion">
+      <option value="https://chat.cxgenie.ai?aid=b7cc484b-fe50-42d0-bf7e-fc2c5e23a139">Default GPT V1</option>
+      <option value="https://chat.cxgenie.ai?aid=bf0a63c7-955e-45e4-baf4-071dfa5a7b76">GPT V2</option>
+      <option value="https://chat.cxgenie.ai?aid=754ad094-7d6f-4783-ba38-fdbdddfa122d">GPT V3</option>
+    </select>
+    <button onclick="resetChat()">Apply Version</button>
+  </div>
+
+  <div class="block"></div>
+  <content id="download--content">
+    <img controls width="100" height="100" src="./img/draw_ic_app.png">
+    <content id="txt">
+      <h6 id="app-name">Farel Alfareza</h6>
+      <p id="des--app">Sekarang Alfabot telah tersedia untuk android, ayo unduh sekarang dengan fitur yang lengkap!! 🥳</p>
+      <button id="download--alfabot">Download Now</button>
+    </content>
+  </content>
+
+  <div class="background--connect"></div>
+  <div id="ground"></div>
+  <div class="sidebar" id="sidebar">
+    <div class="logo">
+      <i class="fas fa-rocket"></i>
+      <span>FR_PROJECT</span>
+    </div>
+    <p id="description" class="description">
+      Selamat datang di Alfabot! Jadikan hidup Anda lebih mudah dengan fitur chatbot kami.
+    </p>
+    <button onclick="window.location='developer/credit_app.html'">
+      <i class="fas fa-info-circle"></i>
+      <p id="credit-txt">Credit</p>
+    </button>
+    <button onclick="window.location='developer/about_dev.html'">
+      <i class="fa fa-address-book"></i>
+      <p id="devcnt-txt">About Developer</p>
+    </button>
+    <button onclick="window.location='https://saweria.co/FarelAlfareza'">
+      <i class="fas fa-donate"></i>
+      <p id="donate-txt">Donate</p>
+    </button>
+    <div class="share-icons">
+      <a href="#" id="fb-share" onclick="shareTo('facebook')" title="Bagikan di Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" id="tw-share" onclick="shareTo('twitter')" title="Bagikan di Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" id="wa-share" onclick="shareTo('whatsapp')" title="Bagikan di WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" id="tg-share" onclick="shareTo('telegram')" title="Bagikan di Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="#" id="lnk-share" onclick="shareTo('linkedin')" title="Bagikan di LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <a href="https://www.instagram.com/farel.project_5/profilecard/?igsh=MTduanM5dTczeTYwMQ==" target="_blank">
+      <i class="fab fa-instagram"></i>
+      <p id="folow-instagram">Ikuti Di instagram</p>
+    </a>
+    <a href="https://www.tiktok.com/@farel.project_5?_t=8raiJx9zrc2&_r=1" target="_blank">
+      <i class="fab fa-tiktok"></i>
+      <p id="folow-tiktok">Ikuti Di tiktok</p>
+    </a>
+    <a onclick="window.location='developer/message.html'" target="_blank">
+      <i class="fa fa-message"></i>
+      <p id="feedback-btn">Masukan</p>
+    </a>
+    <a id="btn-arrow" href="https://whatsapp.com/channel/0029Vaxa6wzK0IBk3gXIr237" target="_blank">
+      <i class="fa fa-arrow-down"></i>
+      <p id="download-btn">Download Apk</p>
+    </a>
+    <a id="btn-arrow" class="vGPT" onclick="toggleGptMenu()" target="_blank">
+      <i class="fa fa-bullhorn"></i>
+      <p id="gpt-btn">GPT Version</p>
+    </a>
+  </div>
+  <div class="content">
+    <button class="toggle-btn" id="toggleBtn">
+      <i id="toggle--ic" class="fas fa-bars"></i>
+    </button>
+    <iframe id="iframe--content" src="https://chat.cxgenie.ai?aid=b7cc484b-fe50-42d0-bf7e-fc2c5e23a139"></iframe>
+  </div>
+  <div class="overlay" id="overlay"></div>
+</body>
+<script src="./res/script.js"></script>
+<script src="./res/vendor.js"></script>
+<script src="./res/data.js"></script>
+
+</html>
